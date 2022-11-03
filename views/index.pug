@@ -6,7 +6,8 @@ block content
   p "Polar bears have black skin. And actually, their fur isn't white—it's see-through, so it appears white as it reflects light."
   button(type = "submit", class = "btn btn-info btn-sm" onclick = 'doBump()') Press Me 
   div(id = "bump") Bump the count
-
+  div(id = "result" style = "font-style = italic")
+  a(href="/aroma") Aroma...Smell the fragrance
 
   script.
       var count = 0
@@ -14,6 +15,5 @@ block content
       function doBump(){
         count = count + bump;
         bump = bump + 1;
-        document.getElementById('bump').textContent = 'Count '+count+' bump '+bump;
-        document.getElementsByClassName('btn').textContent = "Hello"
+        result.innerHTML = 'Count '+count+' bump '+bump;
       }
